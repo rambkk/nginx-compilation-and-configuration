@@ -93,12 +93,6 @@ useradd www-data --home /usr/local/nginx --shell /sbin/nologin
 Since the mail module is dynamic, add it into nginx.conf
 load_module "modules/ngx_mail_module.so";
 
-Edit proper ssl stuff, can be dummy or letsencrypt
-
-
-yum install stunnel
-yum -y install perl-CGI 
-
 
 
 Check firewall:
@@ -110,15 +104,12 @@ firewall-cmd --get-services #get names of services
 firewall-cmd --list-ports
 firewall-cmd --add-port=80/tcp
 firewall-cmd --add-port=443/tcp
-firewall-cmd --add-port=465/tcp
-firewall-cmd --add-port=993/tcp
  
 #firewall-cmd --permanent --add-service=http
 
 firewall-cmd --runtime-to-permanent
 firewall-cmd --reload
 
-#
 #firewall-cmd --remove-port=port-number/port-type
 #firewall-cmd --runtime-to-permanent
 
