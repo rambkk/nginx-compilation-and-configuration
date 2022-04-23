@@ -1,5 +1,14 @@
 Guide for compiling and installing nginx with mail proxy (imap proxy, pop proxy, smtp proxy) on Ubuntu.
 
+cat /etc/issue
+cat /etc/os-release
+
+apt update
+apt upgrade
+timedatectl list-timezones
+timedatectl set-timezone 'Asia/Bangkok'
+
+
 apt install -y git build-essential libpcre3 libpcre3-dev libssl-dev libtool autoconf apache2-dev libxml2-dev libcurl4-openssl-dev automake pkgconf zlib1g-dev
 
 #to remove existing nginx completely, be careful!
