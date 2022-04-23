@@ -63,15 +63,9 @@ make
 make install
 
 
-# if CGI is needed install fcgiwrap
-apt -y install fcgiwrap
-systemctl enable fcgiwrap
-systemctl start fcgiwrap
-systemctl status fcgiwrap
-
+# For installation of fcgiwrapper for running CGI programs check the fcgiwrapper installation document
 
 # References:
-# https://www.cyberciti.biz/faq/how-to-install-fcgiwrap-for-nginx-on-ubuntu-20-04/
 # https://www.techrepublic.com/article/how-to-compile-nginx-for-modsecurity-support-on-ubuntu-server-20-04/
 
 
