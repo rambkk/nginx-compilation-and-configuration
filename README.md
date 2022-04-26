@@ -4,12 +4,12 @@ Brief nginx compilation and configuration guide with fcgiwrap, mail imap/pop/smt
 Need to compile nginx because the default installation is not good enough? This guild could be helpful.
 
 OS:
-CentOS
-Ubuntu
+- CentOS
+- Ubuntu
 
 Configuration:
-fcgiwrapper configuration (optional)
-mail (for imap, pop, and smtp proxy)
+- fcgiwrapper configuration (optional)
+- nginx mail module (for imap, pop, and smtp proxy)
 
 Auth methods (use any):
 - Built in nginx authentication
@@ -24,4 +24,4 @@ Bonus:
 
 
 Not (yet) included:
-php installation
+- php installation
