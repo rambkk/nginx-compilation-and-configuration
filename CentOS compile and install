@@ -1,5 +1,6 @@
 For compiling and installing nginx on CentOS 7 (this might work on other versions, haven't tested)
 
+```bash
 cat /etc/centos-release
 
 yum update
@@ -8,23 +9,31 @@ timedatectl list-timezones
 timedatectl set-timezone 'Asia/Bangkok'
 yum install -y vim curl wget tree
 yum groupinstall -y 'Development Tools'
+```
 
 
 Get latest version and extract:
+```
 https://nginx.org/download/
+```
 
 Get latest version of PCRE, Zlib and OpenSSL-1.1.*:
-
+```
 https://github.com/PCRE2Project/pcre2/releases
 https://www.zlib.net/zlib-1.2.12.tar.gz
 https://www.openssl.org/source/
+```
 
+```bash
 yum install -y perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel gd gd-devel GeoIP GeoIP-devel
 
 cd nginx*
 tree -L 2 .
+```
 
-#more modules, make sure to adjust the downloaded pcre and zlib location
+# more modules, make sure to adjust the downloaded pcre and zlib location
+
+```bash
 ./configure --user=www-data \
             --group=www-data \
             --with-select_module \
@@ -68,14 +77,16 @@ tree -L 2 .
 
 make
 make install
-
+```
 # For installation of fcgiwrapper for running CGI programs check the fcgiwrapper installation document
 
-
+```bash
 useradd www-data --home /usr/local/nginx --shell /sbin/nologin
+```
 
+Check firewall settings:
 
-Check firewall:
+```bash
 firewall-cmd --list-all --zone=home
 firewall-cmd --list-services
 firewall-cmd --get-services #get names of services
@@ -92,7 +103,7 @@ firewall-cmd --reload
 
 #firewall-cmd --remove-port=port-number/port-type
 #firewall-cmd --runtime-to-permanent
-
+```
 
 References:
 https://www.howtoforge.com/how-to-build-nginx-from-source-on-centos-7/
