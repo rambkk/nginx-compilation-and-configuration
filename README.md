@@ -4,8 +4,8 @@ Brief nginx compilation and configuration guide with fcgiwrap, mail imap/pop/smt
 Need to compile nginx because the default installation is not good enough? This guild could be helpful.
 
 Connection diagram:
-```code
-       /----------------\
+```
+       /-----------------\
 USER-->| NGINX server    |
        | protocol & port:|
        |-----------------|            
@@ -24,6 +24,14 @@ USER-->| NGINX server    |
        \-----------------/
 ```
 
+```mermaid
+   graph TD
+    B[user mail client]
+    B --> C{Nginx server <br> protocol/port}
+    C -->|imap port 143/993| D[stunnel server <br> 127.0.0.1:22143] --> H[imap ssl server <br> imaps.mydomain.com:993]
+    C -->|pop3 port 110/995| E[stunnel server <br> 127.0.0.1:22110] --> I[pop3 ssl server <br> pop3s.mydomain.com:995]
+    C -->|smtp port 25/465/587| F[stunnel server <br> 127.0.0.1:22025] --> J[smtp ssl server <br> smtp.mydomain.com:465]
+```
 OS:
 - CentOS
 - Ubuntu
