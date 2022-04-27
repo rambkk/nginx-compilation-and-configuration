@@ -3,6 +3,27 @@ Brief nginx compilation and configuration guide with fcgiwrap, mail imap/pop/smt
 
 Need to compile nginx because the default installation is not good enough? This guild could be helpful.
 
+Connection diagram:
+```code
+       /----------------\
+USER-->| NGINX server    |
+       | protocol & port:|
+       |-----------------|            
+       |   smtp     25    \
+       |            465    > 127.0.0.1:22025 --> stunnel-> SMTP ssl server (port 465)
+       |            587   /
+       |-----------------|            
+       |   pop3     110   \
+       |            995    > 127.0.0.1:22143 --> stunnel-> IMAP ssl server (port 993)
+       |                  /
+       |-----------------|            
+       |   imap      143  \
+       |             993   > 127.0.0.1:22110 --> stunnel-> POP3 ssl server (port 995)
+       |                  /
+       |-----------------|
+       \-----------------/
+```
+
 OS:
 - CentOS
 - Ubuntu
