@@ -6,7 +6,7 @@ mail {
   #auth_http  127.0.0.1:82;
   #auth_http  127.0.0.1/auth;
   #auth_http  127.0.0.1:81/cgi-bin/auth-mail.pl;
-  auth_http  127.0.0.1/cgi-bin/auth-mail.pl;
+  #auth_http  127.0.0.1/cgi-bin/auth-mail.pl;
   proxy  on;
   proxy_pass_error_message on;
   proxy_smtp_auth on;
