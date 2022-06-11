@@ -4,7 +4,7 @@ load_module "modules/ngx_mail_module.so";
 mail {
   server_name m.domain.com;
   #auth_http  127.0.0.1:82;
-  #auth_http  127.0.0.1/auth;
+  auth_http  127.0.0.1/auth;
   #auth_http  127.0.0.1:81/cgi-bin/auth-mail.pl;
   #auth_http  127.0.0.1/cgi-bin/auth-mail.pl;
   proxy  on;
