@@ -1,5 +1,6 @@
 # nginx-compilation-and-configuration
 Brief nginx compilation and configuration guide with fcgiwrap, mail imap/pop/smtp proxy module, etc.
+nginx IMAP proxy https://pluslab.net/blog/nginx-imap-proxy/ 
 
 Need to compile nginx because the default installation is not good enough? This guild could be helpful.
 
