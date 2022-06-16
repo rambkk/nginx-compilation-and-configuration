@@ -1,4 +1,9 @@
-# nginx-compilation-and-configuration
+# nginx IMAP proxy
+### nginx-compilation-and-configuration
+### nginx SMTP proxy
+### nginx POP proxy
+### nginx mail proxy
+
 Brief nginx compilation and configuration guide with fcgiwrap, mail imap/pop/smtp proxy module, etc.
 nginx IMAP proxy https://pluslab.net/blog/nginx-imap-proxy/ 
 
